@@ -49,6 +49,50 @@ Confusion matrix: 48 true negatives, 2 false positives, 2 false negatives, and 4
 
 The strongest positive associations in the fitted model were prior suicidal thoughts, academic pressure, financial stress, and unhealthy dietary habits. Higher study satisfaction and older age were associated with lower predicted risk in this sample.
 
+## Visualizations
+
+### Dataset balance
+
+The target is almost perfectly balanced, with 252 students in the depression class and 250 students in the non-depression class.
+
+![Depression class distribution](./images/04_depression_distribution.png)
+
+The stratified split preserves this balance in both the training and test sets.
+
+![Train and test class balance](./images/01_train_test_class_balance.png)
+
+### Exploratory analysis
+
+The categorical overview shows the sample composition for gender, sleep duration, dietary habits, suicidal thoughts, and family mental-health history.
+
+![Categorical variable distributions](./images/02_categorical_distributions.png)
+
+Students in the depression class show higher academic pressure, financial stress, and study hours, together with lower study satisfaction in this sample.
+
+![Quantitative factors by depression status](./images/05_quantitative_factors.png)
+
+The normalized categorical comparison highlights the largest separation for prior suicidal thoughts and unhealthy dietary habits.
+
+![Depression rate by categorical factors](./images/06_categorical_factors.png)
+
+### Model interpretation and performance
+
+The simple logistic-regression screening identifies the predictors below the 0.05 significance threshold.
+
+![Predictor significance from simple logistic regression](./images/07_predictor_significance.png)
+
+Positive coefficients increase the fitted log-odds of depression, while negative coefficients reduce them. Prior suicidal thoughts have the largest positive coefficient, but this estimate should be interpreted cautiously because the notebook reports possible quasi-separation.
+
+![Logistic-regression coefficient directions](./images/08_model_coefficients.png)
+
+The held-out test confusion matrix contains 48 true negatives, 49 true positives, 2 false positives, and 2 false negatives.
+
+![Confusion matrix](./images/03_confusion_matrix.png)
+
+The ROC curve reports an AUC of 0.995 on the held-out test set.
+
+![ROC curve](./images/09_roc_curve.png)
+
 ## Interpretation and recommendations
 
 - Prioritize a short, voluntary screening workflow around academic pressure, financial stress, study satisfaction, and urgent safety questions.
@@ -72,6 +116,16 @@ The strongest positive associations in the fitted model were prior suicidal thou
 ├── Depression Student Dataset.csv
 ├── Depression_Student_Logistic_Regression.ipynb
 ├── Project Regression.pdf
+├── images/
+│   ├── 01_train_test_class_balance.png
+│   ├── 02_categorical_distributions.png
+│   ├── 03_confusion_matrix.png
+│   ├── 04_depression_distribution.png
+│   ├── 05_quantitative_factors.png
+│   ├── 06_categorical_factors.png
+│   ├── 07_predictor_significance.png
+│   ├── 08_model_coefficients.png
+│   └── 09_roc_curve.png
 └── README.md
 ```
 
