@@ -71,6 +71,16 @@ Students in the depression class show higher academic pressure, financial stress
 
 ![Quantitative factors by depression status](./images/05_quantitative_factors.png)
 
+### Presentation insights: controllable and daily-life factors
+
+Page 15 of the project presentation compares depression-status counts across academic-pressure and financial-stress levels. The depressed group becomes more prominent at the higher levels of both factors, supporting their inclusion in student screening and support planning.
+
+![Academic pressure and financial stress by depression status](./images/10_controllable_risk_factors.png)
+
+Page 16 compares study satisfaction and dietary habits. Lower study satisfaction and unhealthy dietary habits show a visibly larger depressed group in this sample, while these descriptive counts should not be interpreted as causal effects.
+
+![Study satisfaction and dietary habits by depression status](./images/11_daily_life_factors.png)
+
 The normalized categorical comparison highlights the largest separation for prior suicidal thoughts and unhealthy dietary habits.
 
 ![Depression rate by categorical factors](./images/06_categorical_factors.png)
@@ -125,7 +135,9 @@ The ROC curve reports an AUC of 0.995 on the held-out test set.
 │   ├── 06_categorical_factors.png
 │   ├── 07_predictor_significance.png
 │   ├── 08_model_coefficients.png
-│   └── 09_roc_curve.png
+│   ├── 09_roc_curve.png
+│   ├── 10_controllable_risk_factors.png
+│   └── 11_daily_life_factors.png
 └── README.md
 ```
 
