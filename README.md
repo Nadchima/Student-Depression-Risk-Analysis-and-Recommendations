@@ -150,6 +150,8 @@ jupyter notebook Depression_Student_Logistic_Regression.ipynb
 
 Run the notebook from top to bottom so that preprocessing, feature selection, prediction, and evaluation use the same train-test split.
 
+The notebook reads `Depression Student Dataset.csv` directly from the repository directory. Google Drive mounting is not required.
+
 ## Tools
 
 Python, pandas, NumPy, Matplotlib, Seaborn, scikit-learn, statsmodels, and Jupyter Notebook.
